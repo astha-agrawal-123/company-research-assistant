@@ -1,38 +1,45 @@
 # Company Research Assistant — Account Plan Generator
 
 ## Overview
-This is a simple Company Research Assistant that synthesizes data into an account plan.
-It is a demo project for the Eightfold.ai Agentic AI assignment.
+This is a simple Company Research Assistant that synthesizes data into an account plan. It is a demo project for the **Eightfold.ai Agentic AI assignment**.
 
-### Features
+## Features
 - Retrieves company intro from Wikipedia
 - Synthesizes a structured account plan using OpenAI LLM
 - Suggests follow-up questions
 - Allows inline edits and plan export (JSON)
 
-## 📂 Project Structure
+## Requirements
+- Python 3.9+
+- `pip install -r requirements.txt`
+- Set your OpenAI key: `export OPENAI_API_KEY="sk-..."` (or use .env)
 
-* `app.py` — Main Streamlit User Interface.
-* `agent.py` — Logic for orchestration and LLM API calls.
-* `retriever.py` — Wikipedia retrieval logic.
-* `prompts.py` — System prompts and template management.
-* `demo_script.md` — Instructions/Sequence for recording the project demo.
+## How to run
 
-## 🛠️ Installation & Setup
-
-**1. Clone the repository and set up the environment:**
+**1. Install dependencies:**
 
 ```bash
-# Create a virtual environment
 python -m venv venv
-
-# Activate the environment
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-# venv\Scripts\activate
-
-# Install dependencies
+source venv/bin/activate   # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
+```
 
-**2. Configure your API Key:
+**2. Set API key:**
+
+```bash
+export OPENAI_API_KEY="YOUR_KEY"
+```
+
+**2. Start the app:**
+
+```bash
+streamlit run app.py
+```
+
+## Files
+
+- app.py — Streamlit UI
+- agent.py — orchestration and LLM calls
+- retriever.py — Wikipedia retrieval
+- prompts.py — prompt templates
+- demo_script.md — instructions for recording your demo
