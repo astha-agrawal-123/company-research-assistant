@@ -8,11 +8,9 @@ This project is an upgraded intermediate agentic research assistant that:
 
 ## Quick start
 
-1. Create a python virtual environment and activate it:
+1. Go to the path of the folder:
 ```bash
-python -m venv venv
-source venv/bin/activate   # macOS / Linux
-venv\Scripts\activate    # Windows (cmd)
+cd "Path-to-your-file"
 ```
 
 2. Install requirements:
