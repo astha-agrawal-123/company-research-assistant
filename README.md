@@ -35,3 +35,14 @@ streamlit run app.py
 - If your Groq key lacks access to a model, run `list_models.py` to see available models.
 - The news scraping fallback is lightweight (HTML scraping) and may miss JavaScript-heavy sites.
 - For production use, add caching, rate-limiting, and secure storage of API keys.
+
+## How to Generate a Groq API Key (Step-by-Step)
+Follow these steps to create your Groq API key:
+
+- Go to the official Groq Console: https://console.groq.com
+- Sign in using your email or Google account.
+- In the left sidebar, click on API Keys.
+- Click the button “Create API Key”.
+- Give your key a name (e.g., company-research-assistant).
+- Click Generate.
+- Copy the API key shown (it starts with gsk_...).
