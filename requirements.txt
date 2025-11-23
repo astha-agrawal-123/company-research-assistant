@@ -1,6 +1,0 @@
-streamlit>=1.22
-openai>=1.0.0
-requests
-python-dotenv
-beautifulsoup4
-markdown
