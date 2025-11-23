@@ -1,45 +1,37 @@
-# Company Research Assistant — Account Plan Generator
+# Professional Company Research Assistant (Agentic Bot)
 
-## Overview
-This is a simple Company Research Assistant that synthesizes data into an account plan. It is a demo project for the **Eightfold.ai Agentic AI assignment**.
+This project is an upgraded intermediate agentic research assistant that:
+- Fetches data from Wikipedia, company websites, and news (with free scraping fallback)
+- Synthesizes findings using a Groq LLM model
+- Builds an editable account plan with sections: Overview, Key Executives, Products & Services, Financial Snapshot, SWOT, Recommended Strategy
+- Provides the ability to regenerate specific sections using the LLM
 
-## Features
-- Retrieves company intro from Wikipedia
-- Synthesizes a structured account plan using OpenAI LLM
-- Suggests follow-up questions
-- Allows inline edits and plan export (JSON)
+## Quick start
 
-## Requirements
-- Python 3.9+
-- `pip install -r requirements.txt`
-- Set your OpenAI key: `export OPENAI_API_KEY="sk-..."` (or use .env)
-
-## How to run
-
-**1. Install dependencies:**
-
+1. Create a python virtual environment and activate it:
 ```bash
 python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate on Windows
+source venv/bin/activate   # macOS / Linux
+venv\Scripts\activate    # Windows (cmd)
+```
+
+2. Install requirements:
+```bash
 pip install -r requirements.txt
 ```
 
-**2. Set API key:**
-
+3. Set environment variables (or create a `.env` file):
 ```bash
-export OPENAI_API_KEY="YOUR_KEY"
+export GROQ_API_KEY="your_groq_api_key"
+export GROQ_MODEL="llama-3.3-70b-versatile"  # or a model listed by your account
 ```
 
-**2. Start the app:**
-
+4. Run the app:
 ```bash
 streamlit run app.py
 ```
 
-## Files
-
-- app.py — Streamlit UI
-- agent.py — orchestration and LLM calls
-- retriever.py — Wikipedia retrieval
-- prompts.py — prompt templates
-- demo_script.md — instructions for recording your demo
+## Notes
+- If your Groq key lacks access to a model, run `list_models.py` to see available models.
+- The news scraping fallback is lightweight (HTML scraping) and may miss JavaScript-heavy sites.
+- For production use, add caching, rate-limiting, and secure storage of API keys.
